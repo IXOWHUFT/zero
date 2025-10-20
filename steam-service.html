@@ -118,7 +118,7 @@
                 <textarea id="catatan" rows="4" class="form-control" placeholder="Keterangan tambahan..."></textarea>
               </div>
 
-              <button type="submit" class="btn btn-primary w-100">Kirim</button>
+              <button type="submit" class="btn btn-primary w-100">Kirim via WhatsApp</button>
             </form>
           </div>
         </div>
@@ -130,7 +130,7 @@
             <ul class="list-group list-group-flush">
               <li class="list-group-item">Steam & cuci: <strong>Rp 10.000</strong></li>
               <li class="list-group-item">Service ringan: <strong>Rp 35.000</strong></li>
-              <li class="list-group-item">Service lengkap: <strong>Rp 50.000-100.000</strong></li>
+              <li class="list-group-item">Service lengkap: <strong>Rp 50.000 - 100.000</strong></li>
             </ul>
             <img src="assets/img/steam-service/pic-steam&service-1.jpg" alt="Steam & Service" class="img-fluid mt-3 rounded-3" />
           </div>
@@ -169,11 +169,29 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- Simple Alert Handler -->
+  <!-- WhatsApp Sender Script -->
   <script>
     document.getElementById('bookingForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Terima kasih! Booking service Anda telah dikirim.');
+
+      const nama = document.getElementById('nama').value.trim();
+      const tanggal = document.getElementById('tanggal').value;
+      const catatan = document.getElementById('catatan').value.trim();
+
+      if (nama.length < 3) {
+        alert('Nama harus lebih dari 2 huruf.');
+        return;
+      }
+
+      const phoneNumber = "6285813360422"; // ganti dengan nomor WA admin
+
+      const message = `Halo Admin TBSM NESKAR!%0A%0ASaya ingin melakukan booking service:%0A
+Nama: ${nama}%0A
+Tanggal: ${tanggal}%0A
+Catatan: ${catatan || '-'}%0A%0ATerima kasih!`;
+
+      const waUrl = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(waUrl, '_blank');
       this.reset();
     });
   </script>
