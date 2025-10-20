@@ -1,217 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Steam & Service - TBSM NESKAR</title>
-  <meta name="description" content="Steam dan service motor profesional oleh siswa TBSM NESKAR. Pelayanan cepat, bersih, dan terpercaya.">
-  <meta name="keywords" content="steam motor, service motor, TBSM, NESKAR, bengkel sekolah, unit produksi">
-
-  <!-- Favicons -->
+  <meta name="description" content="Layanan steam dan service kendaraan oleh TBSM NESKAR. Booking mudah via WhatsApp.">
+  <meta name="keywords" content="steam motor, service motor, TBSM, NESKAR, bengkel sekolah, booking WA">
   <link href="assets/img/webicon.jpg" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600;700&family=Raleway:wght@500;700&display=swap" rel="stylesheet">
-
-  <!-- Vendor CSS Files -->
+  <!-- Fonts & CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- Main CSS File -->
-  <link href="assets/css/main.css" rel="stylesheet">
+  <style>
+    body {font-family: 'Poppins', sans-serif;}
+    .video-background {object-fit: cover; width: 100%; height: 100%;}
+    .section {padding: 60px 0;}
+    .grid-2 {display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;}
+    .btn {background-color: #0d6efd; color: white; border: none; padding: 10px 18px; border-radius: 6px;}
+    .btn:hover {background-color: #0b5ed7;}
+    footer {background: #111; color: #fff; padding: 40px 0;}
+  </style>
 </head>
+<body>
 
-<body class="index-page">
+<!-- Header -->
+<header id="header" class="d-flex align-items-center fixed-top">
+  <div class="container d-flex justify-content-between align-items-center">
+    <a href="index.html" class="logo d-flex align-items-center">
+      <img src="assets/img/webicon.jpg" alt="">
+      <h1 class="ms-2">TBSM NESKAR</h1>
+    </a>
+    <nav id="navbar" class="navbar">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">Tentang</a></li>
+        <li><a href="./steam-service.html" class="active">Steam & Service</a></li>
+        <li><a href="./store.html">Store</a></li>
+        <li><a href="./contact.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+<main style="margin-top:80px">
 
-      <a href="index.html" class="logo d-flex align-items-center">
-        <i class="bi bi-buildings"></i>
-        <h1 class="sitename">UP TBSM</h1>
-      </a>
+  <!-- Hero Video -->
+  <section>
+    <video autoplay muted loop playsinline class="video-background" poster="assets/img/education/thumb-video.jpg">
+      <source src="assets/img/education/thumb-video.mp4" type="video/mp4">
+    </video>
+  </section>
 
-      <nav id="navmenu" class="navmenu">
+  <!-- Booking Section -->
+  <section class="section container">
+    <h2 class="mb-3">Steam & Service</h2>
+    <p class="mb-4">Layanan cuci steam dan servis lengkap untuk kendaraan Anda. Booking mudah, cepat, dan langsung terhubung ke WhatsApp kami.</p>
+
+    <div class="grid-2">
+      <div class="contact-form">
+        <h3>Booking Service</h3>
+        <form id="bookingForm">
+          <label>Nama<br>
+            <input id="nama" type="text" required placeholder="Masukkan nama" style="width:100%;padding:8px;margin-top:6px;border:1px solid #e6eaf2;border-radius:6px">
+          </label><br><br>
+          <label>Tanggal<br>
+            <input id="tanggal" type="date" required style="width:100%;padding:8px;margin-top:6px;border:1px solid #e6eaf2;border-radius:6px">
+          </label><br><br>
+          <label>Catatan<br>
+            <textarea id="catatan" placeholder="Tulis permintaan khusus atau jenis service..." style="width:100%;padding:8px;border:1px solid #e6eaf2;border-radius:6px" rows="4"></textarea>
+          </label><br><br>
+          <button class="btn" type="button" onclick="sendToWhatsApp()">Kirim via WhatsApp</button>
+        </form>
+      </div>
+
+      <div>
+        <h3>Harga Layanan (contoh)</h3>
         <ul>
-          <li><a href="./index.html#hero">Home</a></li>
-          <li><a href="./index.html#students-life-block">Gallery Kegiatan</a></li>
-          <li><a href="./index.html#events-up-tbsm">Event</a></li>
-          <li><a href="./steam-service.html" class="active">Steam & Service</a></li>
-          <li><a href="./store.html">Store TBSM</a></li>
-          <li><a href="./contact.html">Contact</a></li>
+          <li>Steam & cuci: Rp 50.000</li>
+          <li>Service ringan: Rp 120.000</li>
+          <li>Service lengkap: Rp 350.000</li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+        <img src="assets/img/photo5.svg" alt="Steam Service" style="margin-top:12px;border-radius:8px;width:100%;max-width:400px;">
+      </div>
     </div>
-  </header>
+  </section>
 
-  <!-- ======= Main ======= -->
-  <main class="main">
+</main>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero section dark-background">
-      <div class="hero-container">
-        <video autoplay muted loop playsinline class="video-background" style="object-fit:cover;width:100%;height:100%;" poster="assets/img/education/thumb-video.jpg">
-          <source src="assets/img/education/thumb-video.mp4" type="video/mp4">
-        </video>
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row align-items-center">
-            <div data-aos="zoom-out" data-aos-delay="100">
-              <div class="hero-content text-center text-white">
-                <h1>STEAM & SERVICE</h1>
-                <p>Rawat motormu dengan baik, dia akan menemanimu sejauh perjalanan.</p>
-                <div class="cta-buttons mt-3">
-                  <a href="./index.html" class="btn btn-primary">Back to Home</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Jam Digital -->
-      <div class="event-ticker text-center mt-3">
-        <div id="clock" style="font-size:1.8rem;color:#fff;background:rgba(0,0,0,0.5);display:inline-block;padding:8px 16px;border-radius:10px;"></div>
-        <script>
-          function pad(n){return n.toString().padStart(2,'0');}
-          function updateClock(){
-            const now=new Date();
-            document.getElementById('clock').textContent=`${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
-          }
-          setInterval(updateClock,1000);
-          updateClock();
-        </script>
-      </div>
-    </section>
-    <!-- End Hero -->
-
-    <!-- Testimoni Gallery -->
-    <section id="testimoni-gallery" class="section mt-5">
-      <div class="container">
-        <div class="section-title text-center" data-aos="fade-up">
-          <h2>Testimoni</h2>
-          <p>Beberapa gambar tentang steam & service kami.</p>
-        </div>
-        
-        <div class="row align-items-center">
-          <div class="col-12 col-md-6" data-aos="fade-up">
-            <div id="carouselExample" class="carousel slide">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="assets/img/steam-service/pic-steam&service-1.jpg" class="d-block w-100" alt="Steam motor 1">
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/img/steam-service/pic-steam&service-2.jpg" class="d-block w-100" alt="Steam motor 2">
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/img/steam-service/pic-steam&service-3.jpg" class="d-block w-100" alt="Steam motor 3">
-                </div>
-              </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="col-12 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="steam-service-text mt-3">
-              <h5>Jika anda mau steam & service hubungi kami di kontak di bawah ini. Nanti anggota Unit Produksi akan datang ke kelas kalian. Terimakasih.</h5>
-            </div>
-            <a href="https://wa.me/6289661888862" class="btn btn-success mt-3">Steam & Service</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Testimoni -->
-
-    <!-- Booking & Harga Section -->
-    <section class="section container mt-5" data-aos="fade-up">
-      <h2 class="text-center mb-3">Steam & Service</h2>
-      <p class="text-center mb-4">Layanan cuci steam dan servis lengkap untuk kendaraan.</p>
-      <div class="row g-4">
-        <div class="col-md-6">
-          <div class="contact-form p-4 border rounded-3 shadow-sm">
-            <h3>Booking Service</h3>
-            <form>
-              <div class="mb-3">
-                <label class="form-label">Nama</label>
-                <input type="text" class="form-control" placeholder="Nama lengkap">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Tanggal</label>
-                <input type="date" class="form-control">
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Catatan</label>
-                <textarea class="form-control" rows="4" placeholder="Contoh: ganti oli, cek rem..."></textarea>
-              </div>
-              <button type="button" class="btn btn-primary">Kirim</button>
-            </form>
-          </div>
-        </div>
-
-        <div class="col-md-6">
-          <div class="p-4 border rounded-3 shadow-sm">
-            <h3>Harga Layanan (contoh)</h3>
-            <ul class="list-unstyled mt-3">
-              <li>✅ Steam & cuci: <strong>Rp 50.000</strong></li>
-              <li>✅ Service ringan: <strong>Rp 120.000</strong></li>
-              <li>✅ Service lengkap: <strong>Rp 350.000</strong></li>
-            </ul>
-            <img src="assets/img/photo5.svg" alt="Ilustrasi service motor" class="img-fluid mt-3 rounded-3">
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End Booking & Harga -->
-
-  </main>
-  <!-- End Main -->
-
-  <!-- ======= Footer ======= -->
-  <footer class="footer mt-5" style="background-color: black; color: white;">
-    <div class="container py-4 text-center">
-      <p><strong>TBSM NESKAR</strong> — Demo website style seperti persib.co.id</p>
-      <p>Alamat kantor contoh · Jakarta · Indonesia</p>
-      <div class="mt-3">
-        <a href="https://instagram.com/tbsmneskar" class="mx-2 text-white"><i class="bi bi-instagram fs-3"></i></a>
-        <a href="https://youtube.com/@tbsmneskar" class="mx-2 text-white"><i class="bi bi-youtube fs-3"></i></a>
-        <a href="https://tiktok.com/tbsmneskar" class="mx-2 text-white"><i class="bi bi-tiktok fs-3"></i></a>
-        <a href="mailto:tbsmneskar@gmail.com" class="mx-2 text-white"><i class="bi bi-envelope fs-3"></i></a>
-      </div>
-      <hr class="bg-white mt-4 mb-3">
-      <p>© 2025 IT Division. All Rights Reserved.</p>
+<!-- Footer -->
+<footer class="footer">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div>
+      <p><strong>TBSM NESKAR</strong> — Demo website bergaya seperti persib.co.id</p>
+      <p>Alamat: Jakarta, Indonesia</p>
     </div>
-  </footer>
+    <div>
+      <p>© 2025 TBSM NESKAR</p>
+    </div>
+  </div>
+</footer>
 
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<!-- Script -->
+<script>
+  function sendToWhatsApp() {
+    const nama = document.getElementById('nama').value.trim();
+    const tanggal = document.getElementById('tanggal').value;
+    const catatan = document.getElementById('catatan').value.trim();
+    if (!nama || !tanggal) {
+      alert('Harap isi nama dan tanggal terlebih dahulu.');
+      return;
+    }
 
-  <!-- Preloader -->
-  <div id="preloader"></div>
+    const pesan = `Halo TBSM NESKAR,%0ASaya ingin melakukan booking service:%0A%0ANama: ${nama}%0ATanggal: ${tanggal}%0ACatatan: ${catatan || '-'}%0A%0ATerima kasih.`;
+    const noWa = '6281234567890'; // GANTI dengan nomor WhatsApp tujuan (tanpa +)
+    const waUrl = `https://wa.me/${noWa}?text=${pesan}`;
+    window.open(waUrl, '_blank');
+  }
+</script>
 
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
