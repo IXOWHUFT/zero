@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,24 +26,14 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- =======================================================
-  * Template Name: NiceSchool
-  * Template URL: https://bootstrapmade.com/nice-school-bootstrap-education-template/
-  * Updated: May 10 2025 with Bootstrap v5.3.6
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="index-page">
 
+  <!-- HEADER -->
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/store/logo.webp" alt=""> -->
         <i class="bi bi-buildings"></i>
         <h1 class="sitename">UP TBSM</h1>
       </a>
@@ -51,7 +41,8 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="#hero">Home</a></li>
-          <li><a href="#students-life-block">Gallery Kegiatan</a></li>
+          <li><a href="#news-section">Berita</a></li>
+          <li><a href="#students-life-block">Gallery</a></li>
           <li><a href="#events-up-tbsm">Event</a></li>
           <li><a href="./steam-service.html">Steam & Service</a></li>
           <li><a href="./store.html">Store</a></li>
@@ -59,29 +50,27 @@
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
-
     </div>
   </header>
+  <!-- END HEADER -->
 
   <main class="main">
 
-    <!-- Hero Section -->
+    <!-- HERO -->
     <section id="hero" class="hero section dark-background">
-
       <div class="hero-container">
-        <video autoplay="" muted="" loop="" playsinline="" class="video-background">
+        <video autoplay muted loop playsinline class="video-background">
           <source src="assets/img/education/thumb-video-up.mp4" type="video/mp4">
         </video>
         <div class="overlay"></div>
         <div class="container">
           <div class="row align-items-center">
-            <div class="" data-aos="zoom-out" data-aos-delay="100">
-              <div class="hero-content">
+            <div data-aos="zoom-out" data-aos-delay="100">
+              <div class="hero-content text-center">
                 <h1>TEKNIK BISNIS SEPEDA MOTOR</h1>
-                <p>Kompetensi keahlian ini merupakan salah satu jurusan yang telah ada saat SMKN 1 KARAWANG BARAT didirikan yaitu tahun 1999,yang saat itu masih dengan nama teknik mekanik otomotif (TMO).seiring waktu,jurusan bertransformasih menjadi teknik dan bisnis sepeda motor (TBSM) dan hingga kini berubah menjadi teknik dan bisnis sepeda motor(TBSM)</p>
+                <p>Kompetensi keahlian ini merupakan salah satu jurusan yang telah ada sejak SMKN 1 Karawang Barat didirikan tahun 1999. Kini, TBSM bertransformasi menjadi jurusan unggulan berorientasi pada teknologi otomotif modern dan kewirausahaan.</p>
                 <div class="cta-buttons">
-                  <a href="steam-service.html" class="btn-primary">News TBSM</a>
-                  <!-- <a href="#" class="btn-secondary">Discover Programs</a> -->
+                  <a href="#news-section" class="btn-primary">News TBSM</a>
                 </div>
               </div>
             </div>
@@ -89,54 +78,120 @@
         </div>
       </div>
 
+      <!-- JAM DIGITAL -->
       <div class="event-ticker">
-        <div class="container">
-          <div class="row gy-4">
-            <div style="text-align: center;">
-              <div style="display: inline-block; justify-content: center; align-items: center">
-                <span id="h"></span><span>&nbsp;&nbsp;:&nbsp;&nbsp;</span><span id="m"></span><span>&nbsp;&nbsp;:&nbsp;&nbsp;</span><span id="s"></span>
-              
-                <script>
-                  function pad(n) { return n.toString().padStart(2, '0'); }
-              
-                  function updateClock() {
-                    const now = new Date();
-                    document.getElementById('h').textContent = pad(now.getHours());   // 24 jam
-                    document.getElementById('m').textContent = pad(now.getMinutes());
-                    document.getElementById('s').textContent = pad(now.getSeconds());
-                  }
-              
-                  updateClock();                   // set isi awal
-                  setInterval(updateClock, 1000);  // update tiap detik
-                </script>
-              </div>
+        <div class="container text-center">
+          <div style="display:inline-block;">
+            <span id="h"></span><span>&nbsp;:&nbsp;</span><span id="m"></span><span>&nbsp;:&nbsp;</span><span id="s"></span>
+            <script>
+              function pad(n) { return n.toString().padStart(2, '0'); }
+              function updateClock() {
+                const now = new Date();
+                document.getElementById('h').textContent = pad(now.getHours());
+                document.getElementById('m').textContent = pad(now.getMinutes());
+                document.getElementById('s').textContent = pad(now.getSeconds());
+              }
+              updateClock();
+              setInterval(updateClock, 1000);
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END HERO -->
+
+
+    <!-- BERITA & HIGHLIGHTS -->
+    <section class="section container reveal" id="news-section" data-aos="fade-up">
+      <div class="section-title text-center mb-5">
+        <h2 class="fw-bold">Berita & Highlights</h2>
+        <p class="text-muted">Kabar terbaru seputar kegiatan, prestasi, dan inovasi di UP TBSM NESKAR.</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Berita 1 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 shadow-lg border-0 rounded-4 overflow-hidden" data-aos="zoom-in" data-aos-delay="100">
+            <img src="assets/img/berita1.jpg" class="card-img-top" alt="Kegiatan Servis Gratis">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Kegiatan Servis Gratis untuk Masyarakat</h5>
+              <p class="card-text text-muted">Siswa TBSM melaksanakan program bakti sosial berupa servis gratis kendaraan roda dua di lingkungan sekitar sekolah.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a href="#" class="btn btn-outline-primary btn-sm">Selengkapnya</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Berita 2 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 shadow-lg border-0 rounded-4 overflow-hidden" data-aos="zoom-in" data-aos-delay="200">
+            <img src="assets/img/berita2.jpg" class="card-img-top" alt="Juara LKS Otomotif">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">PERESMIAN TEMPAT UJI KOMPENTENSI TUK </h5>
+              <p class="card-text text-muted">Prestasi membanggakan diraih oleh sekolah kami dalam peresmian uji Kompetensi astra honda (TUK) bidang otomotif sepeda motor.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a href="https://www.instagram.com/reel/DOkna3WEWvV/?igsh=ZGZ6MWhnbTJ3bHpr" class="btn btn-outline-primary btn-sm">Baca Berita</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Berita 3 -->
+        <div class="col-lg-4 col-md-6">
+          <div class="card h-100 shadow-lg border-0 rounded-4 overflow-hidden" data-aos="zoom-in" data-aos-delay="300">
+            <img src="assets/img/berita3.jpg" class="card-img-top" alt="Pelatihan Teknologi Honda">
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Pelatihan Teknologi Motor Honda Terbaru</h5>
+              <p class="card-text text-muted">Guru dan siswa TBSM mendapatkan pelatihan langsung dari instruktur AHM terkait teknologi motor injeksi generasi terbaru.</p>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+              <a href="#" class="btn btn-outline-primary btn-sm">Lihat Detail</a>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-    </section><!-- /Hero Section -->
+    <style>
+      #news-section .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
 
-    <!-- About Section -->
+      #news-section .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      #news-section .card-img-top {
+        height: 220px;
+        object-fit: cover;
+      }
+
+      #news-section .btn-outline-primary {
+        border-radius: 50px;
+        padding: 6px 16px;
+      }
+    </style>
+    <!-- END BERITA -->
+
+
+    <!-- ABOUT -->
     <section id="about" class="about section">
-
       <div class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row mb-5">
           <div class="col-lg-6 pe-lg-5" data-aos="fade-right" data-aos-delay="200">
-            <h2 class="display-6 fw-bold mb-4">  VISI & MISI </h2>
+            <h2 class="display-6 fw-bold mb-4">VISI & MISI</h2>
             <hr>
             <h4 class="fw-bold">Visi</h4>
             <p class="lead mb-4">Menjadi lembaga pendidikan dan pelatihan internasional yang mampu menghasilkan lulusan profesional, mandiri dan berdaya saing tinggi.</p>
-            
+
             <h4 class="fw-bold">Misi</h4>
             <p class="lead mb-4">
               • Menerapkan sistem manajemen mutu ISO 9001:2008 <br>
-              • Menerapkan Proses pembelajaran berbasis Teknologi informasi dan kmunikasi, berwawasan lingkungan dan berkeunggulan lokal<br>
-              • Menerapkan pembelajaran bilingual<br>
-              • Berkerjasama dengan dunia usaha/dunia industri, Asosiasi profesi dan instasi terkait<br>
-              • Menerapkan pendidikan dan pelatihan berwawasan kewirausahaan<br>
-              • Menerapkan pendidikan dan pelatihan dengan sistem production based training(PBT)<br>
+              • Menerapkan Proses pembelajaran berbasis Teknologi informasi dan komunikasi <br>
+              • Berkerjasama dengan dunia industri dan asosiasi profesi <br>
+              • Menerapkan pendidikan berbasis kewirausahaan dan Production Based Training (PBT)
             </p>
           </div>
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
@@ -150,191 +205,81 @@
             </div>
           </div>
         </div>
-
       </div>
+    </section>
+    <!-- END ABOUT -->
 
-    </section><!-- /About Section -->
 
-
-    <!-- Students Life Block Section -->
+    <!-- GALLERY -->
     <section id="students-life-block" class="students-life-block section">
-
-      <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Gallery</h2>
         <p>Beberapa gambar yang kami ambil tentang program-program kami.</p>
-      </div><!-- End Section Title -->
+      </div>
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div id="carouselExample" class="carousel slide">
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="assets/img/gallery/g1.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/gallery/g2.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/gallery/g3.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/gallery/g4.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item">
-              <img src="assets/img/gallery/g5.jpg" class="d-block w-100" alt="...">
-            </div>
+            <div class="carousel-item active"><img src="assets/img/gallery/g1.jpg" class="d-block w-100" alt=""></div>
+            <div class="carousel-item"><img src="assets/img/gallery/g2.jpg" class="d-block w-100" alt=""></div>
+            <div class="carousel-item"><img src="assets/img/gallery/g3.jpg" class="d-block w-100" alt=""></div>
+            <div class="carousel-item"><img src="assets/img/gallery/g4.jpg" class="d-block w-100" alt=""></div>
+            <div class="carousel-item"><img src="assets/img/gallery/g5.jpg" class="d-block w-100" alt=""></div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="carousel-control-prev-icon"></span>
             <span class="visually-hidden">Previous</span>
           </button>
           <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="carousel-control-next-icon"></span>
             <span class="visually-hidden">Next</span>
           </button>
         </div>
       </div>
-
-    </section><!-- /Students Life Block Section -->
-
-    <!-- Testimonials Section -->
-
-<!-- 
-    <section id="testimonials" class="testimonials section">
-
-
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Motivasi</h2>
-        <p>Motivasi guru SMKN 1 Karawang Barat.</p>
-      </div>
-
-      <div class="container">
-
-        <div class="testimonial-masonry">
-
-          <div class="testimonial-item" data-aos="fade-up">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Implementing innovative strategies has revolutionized our approach to market challenges and competitive positioning.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-f-7.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Rachel Bennett</h3>
-                  <span class="position">Strategy Director</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item highlight" data-aos="fade-up" data-aos-delay="100">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Exceptional service delivery and innovative solutions have transformed our business operations, leading to remarkable growth and enhanced customer satisfaction across all touchpoints.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-m-7.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Daniel Morgan</h3>
-                  <span class="position">Chief Innovation Officer</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-            <div class="testimonial-content">
-              <div class="quote-pattern">
-                <i class="bi bi-quote"></i>
-              </div>
-              <p>Strategic partnership has enabled seamless digital transformation and operational excellence.</p>
-              <div class="client-info">
-                <div class="client-image">
-                  <img src="assets/img/person/person-f-8.webp" alt="Client">
-                </div>
-                <div class="client-details">
-                  <h3>Emma Thompson</h3>
-                  <span class="position">Digital Lead</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
     </section>
-
--->
-
-<!-- /Testimonials Section -->
+    <!-- END GALLERY -->
 
 
-    
-    <!-- Stats Section -->
+    <!-- UNIT PRODUKSI -->
     <section id="stats" class="stats section">
-
       <div id="steam-service" class="container" data-aos="fade-up" data-aos-delay="100">
-
         <div class="row">
           <div class="col-lg-6">
             <div class="stats-overview" data-aos="fade-right" data-aos-delay="200">
               <h2 class="stats-title">Unit Produksi</h2>
-              <p class="stats-description">Bagian penting dalam sebuah perusahaan atau pabrik yang bertanggung jawab atas proses produksi barang atau jasa. Unit produksi ini merupakan bagian yang memfokuskan diri pada penghasilan produk yang akan dijual atau disediakan kepada konsumen.</p>
+              <p class="stats-description">Bagian penting dalam kegiatan jurusan yang berfokus pada produksi jasa otomotif, seperti servis, cuci steam, dan pengelolaan bisnis sepeda motor.</p>
               <div class="stats-cta">
                 <a href="./steam-service.html" class="btn btn-primary">Steam & Service</a>
               </div>
             </div>
           </div>
-          <div class="col-lg-6">
-          </div>
+          <div class="col-lg-6"></div>
         </div>
       </div>
-
-    </section><!-- /Stats Section -->
-
-
+    </section>
+    <!-- END UNIT PRODUKSI -->
   </main>
 
-
+  <!-- FOOTER -->
   <section id="footer" class="footer" style="background-color: black;">
     <div class="footer-container">
-      <div>
-        <div class="contact-container">
-          <div class="contact-inner">
-            <div class="contact-icon-inner flex space-x-4 my-10" style="display: flex; justify-content: center">
-              <div class="icon-contact-redirect">
-                <a href="https://instagram.com/tbsmneskar"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg></a>
-              </div>
-              <div class="icon-contact-redirect">
-                <a href="https://youtube.com/@tbsmneskar"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M21.7 8.037a4.26 4.26 0 0 0-.789-1.964 2.84 2.84 0 0 0-1.984-.839c-2.767-.2-6.926-.2-6.926-.2s-4.157 0-6.928.2a2.836 2.836 0 0 0-1.983.839 4.225 4.225 0 0 0-.79 1.965 30.146 30.146 0 0 0-.2 3.206v1.5a30.12 30.12 0 0 0 .2 3.206c.094.712.364 1.39.784 1.972.604.536 1.38.837 2.187.848 1.583.151 6.731.2 6.731.2s4.161 0 6.928-.2a2.844 2.844 0 0 0 1.985-.84 4.27 4.27 0 0 0 .787-1.965 30.12 30.12 0 0 0 .2-3.206v-1.516a30.672 30.672 0 0 0-.202-3.206Zm-11.692 6.554v-5.62l5.4 2.819-5.4 2.801Z" clip-rule="evenodd"/></svg></a>
-              </div>
-              <div class="icon-contact-redirect">
-                <a href="https://tiktok.com/tbsmneskar"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16"><path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/></svg></a>
-              </div>
-              <div class="icon-contact-redirect">
-                <a href="mailto:"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg></a>
-              </div>
-            </div>
+      <div class="contact-container">
+        <div class="contact-inner">
+          <div style="display: flex; justify-content: center" class="my-4">
+            <div class="icon-contact-redirect"><a href="https://instagram.com/tbsmneskar"><i class="bi bi-instagram" style="font-size: 36px; color:white"></i></a></div>
+            <div class="icon-contact-redirect"><a href="https://youtube.com/@tbsmneskar"><i class="bi bi-youtube" style="font-size: 36px; color:white"></i></a></div>
+            <div class="icon-contact-redirect"><a href="https://tiktok.com/@tbsmneskar"><i class="bi bi-tiktok" style="font-size: 36px; color:white"></i></a></div>
+            <div class="icon-contact-redirect"><a href="mailto:"><i class="bi bi-envelope" style="font-size: 36px; color:white"></i></a></div>
           </div>
         </div>
+      </div>
 
-        <div class="text-center" style="margin: 15px;">
-          <!-- <i class="fa fa-instagram" style="padding-right: 5px"></i> -->
-          <h5 style="color: white"> © 2025 IT Division. All Rights Reserved.</h5>
-        </div>
-        
+      <div class="text-center" style="margin: 15px;">
+        <h5 style="color: white">© 2025 IT Division. All Rights Reserved.</h5>
       </div>
     </div>
-    
   </section>
+
   <style>
     .icon-contact-redirect {
       margin: 5px;
@@ -344,25 +289,11 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-  <!-- Preloader -->
-  <!-- <div id="preloader"></div> -->
-
-  <!-- Vendor JS Files -->
+  <!-- Vendor JS -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-
-  <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
-
 </body>
-
-
 </html>
-
-
