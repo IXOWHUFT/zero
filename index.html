@@ -54,49 +54,116 @@
 
   <main class="main">
 
-    <!-- HERO -->
-    <section id="hero" class="hero section dark-background">
-      <div class="hero-container">
-        <video autoplay muted loop playsinline class="video-background">
-          <source src="assets/img/education/thumb-video-up.mp4" type="video/mp4" />
-        </video>
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row align-items-center">
-            <div data-aos="zoom-out" data-aos-delay="100">
-              <div class="hero-content text-center">
-                <h1>TEKNIK BISNIS SEPEDA MOTOR</h1>
-                <p>Jurusan unggulan SMKN 1 Karawang Barat yang berorientasi pada teknologi otomotif modern dan kewirausahaan.</p>
-                <div class="cta-buttons">
-                  <a href="#news-section" class="btn btn-primary rounded-pill px-4 py-2">News TBSM</a>
-                </div>
-              </div>
+ <!-- HERO -->
+<section id="hero" class="hero section dark-background">
+  <div class="hero-container">
+    <video autoplay muted loop playsinline class="video-background">
+      <source src="assets/img/education/thumb-video-up.mp4" type="video/mp4" />
+    </video>
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div data-aos="zoom-out" data-aos-delay="100">
+          <div class="hero-content text-center">
+
+            <!-- Efek Ketik -->
+            <h1 id="typewriter" class="fw-bold text-uppercase"></h1>
+            <span class="cursor">|</span>
+
+            <p class="mt-3">Jurusan unggulan SMKN 1 Karawang Barat yang berorientasi pada teknologi otomotif modern dan kewirausahaan.</p>
+            <div class="cta-buttons">
+              <a href="#news-section" class="btn btn-primary rounded-pill px-4 py-2">News TBSM</a>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
 
-      <!-- JAM DIGITAL -->
-      <div class="event-ticker">
-        <div class="container text-center">
-          <div style="display:inline-block;">
-            <span id="h"></span><span>&nbsp;:&nbsp;</span><span id="m"></span><span>&nbsp;:&nbsp;</span><span id="s"></span>
-          </div>
-        </div>
+  <!-- JAM DIGITAL -->
+  <div class="event-ticker">
+    <div class="container text-center">
+      <div style="display:inline-block;">
+        <span id="h"></span><span>&nbsp;:&nbsp;</span><span id="m"></span><span>&nbsp;:&nbsp;</span><span id="s"></span>
       </div>
-      <script>
-        function pad(n) { return n.toString().padStart(2, '0'); }
-        function updateClock() {
-          const now = new Date();
-          document.getElementById('h').textContent = pad(now.getHours());
-          document.getElementById('m').textContent = pad(now.getMinutes());
-          document.getElementById('s').textContent = pad(now.getSeconds());
-        }
-        updateClock();
-        setInterval(updateClock, 1000);
-      </script>
-    </section>
-    <!-- END HERO -->
+    </div>
+  </div>
+</section>
+
+<!-- STYLE & SCRIPT -->
+<style>
+  #typewriter {
+    color: #fff;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    display: inline-block;
+  }
+
+  .cursor {
+    display: inline-block;
+    color: #00ffcc;
+    font-weight: bold;
+    font-size: 2.8rem;
+    animation: blink 0.7s infinite;
+  }
+
+  @keyframes blink {
+    0%, 50% { opacity: 1; }
+    50.01%, 100% { opacity: 0; }
+  }
+</style>
+
+<script>
+  const text = "TEKNIK BISNIS SEPEDA MOTOR";
+  const typeSpeed = 100;  // kecepatan ketik (ms per huruf)
+  const eraseSpeed = 80;  // kecepatan hapus (ms per huruf)
+  const delayAfterFull = 1200; // jeda setelah teks penuh
+  const delayAfterErase = 600; // jeda sebelum mulai ketik lagi
+  let i = 0;
+  let forward = true; // arah ketikan (true = kanan, false = kiri)
+
+  function typeEffect() {
+    const target = document.getElementById("typewriter");
+
+    if (forward) {
+      // Ketik maju ke kanan
+      if (i < text.length) {
+        target.textContent = text.substring(0, i + 1);
+        i++;
+        setTimeout(typeEffect, typeSpeed);
+      } else {
+        forward = false; // ubah arah jadi hapus
+        setTimeout(typeEffect, delayAfterFull);
+      }
+    } else {
+      // Hapus mundur ke kiri
+      if (i > 0) {
+        target.textContent = text.substring(0, i - 1);
+        i--;
+        setTimeout(typeEffect, eraseSpeed);
+      } else {
+        forward = true; // ubah arah jadi ketik lagi
+        setTimeout(typeEffect, delayAfterErase);
+      }
+    }
+  }
+
+  window.onload = function() {
+    typeEffect();
+    updateClock();
+    setInterval(updateClock, 1000);
+  };
+
+  // JAM DIGITAL
+  function pad(n) { return n.toString().padStart(2, '0'); }
+  function updateClock() {
+    const now = new Date();
+    document.getElementById('h').textContent = pad(now.getHours());
+    document.getElementById('m').textContent = pad(now.getMinutes());
+    document.getElementById('s').textContent = pad(now.getSeconds());
+  }
+</script>
+
 
     <!-- BERITA & HIGHLIGHTS -->
     <section class="section container reveal" id="news-section" data-aos="fade-up">
