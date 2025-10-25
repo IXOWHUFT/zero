@@ -167,6 +167,32 @@
   document.addEventListener("DOMContentLoaded", typeErase);
 </script>
 
+    
+   <!-- Jam Digital -->
+      <div class="event-ticker">
+        <div class="container">
+          <div class="row gy-4">
+            <div style="text-align: center;">
+              <div style="display: inline-block; justify-content: center; align-items: center">
+                <span id="h"></span><span>&nbsp;&nbsp;:&nbsp;&nbsp;</span><span id="m"></span><span>&nbsp;&nbsp;:&nbsp;&nbsp;</span><span id="s"></span>
+              </div>
+      <script>
+        function pad(n) {
+          return n.toString().padStart(2, '0');
+        }
+        function updateClock() {
+          const now = new Date();
+          document.getElementById('h').textContent = pad(now.getHours());
+          document.getElementById('m').textContent = pad(now.getMinutes());
+          document.getElementById('s').textContent = pad(now.getSeconds());
+        }
+        updateClock();
+        setInterval(updateClock, 1000);
+      </script>
+    </section>
+    <!-- /Hero Section -->
+
+
 
     <!-- BERITA & HIGHLIGHTS -->
     <section class="section container reveal" id="news-section" data-aos="fade-up">
@@ -450,6 +476,7 @@
   <script src="assets/js/main.js"></script>
 </body>
 </html>
+
 
 
 
